@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório Importante</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+    }
+    img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;" onbeforeunload="return 'Tem certeza que quer sair?';">
+  <img src="https://i.imgur.com/fvJm9lP.jpg" alt="Kid Bengala">
+  <audio id="gemidao" autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/gemidao-do-zap.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    document.addEventListener('click', () => {
+      const audio = document.getElementById('gemidao');
+      audio.play();
+    });
+    window.onload = () => {
+      const audio = document.getElementById('gemidao');
+      audio.volume = 1;
+      audio.play();
+    };
+  </script>
+</body>
+</html>
